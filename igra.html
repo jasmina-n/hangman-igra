@@ -41,3 +41,9 @@ def redraw_game_window():
 global guessed
     global limbs
     win.fill(GREEN)  
+    for button in buttons:
+        if button[4]:  # Agar tugma ko'rsatilayotgan bo'lsa
+            pygame.draw.circle(win, BLACK, (button[1], button[2]), button[3])
+            pygame.draw.circle(win, button[0], (button[1], button[2]), button[3] - 2)
+            label = btn_font.render(chr(button[5]), 1, BLACK)
+            win.blit(label, (button[1] - label.get_width() / 2, button[2] - label.get_height() / 2))
