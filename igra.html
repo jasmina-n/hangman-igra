@@ -147,3 +147,9 @@ while inPlay:
                 buttons[letter - 65][4] = False
                 if hang(chr(letter)):
                     limbs += 1
+                    if limbs == 6:
+                        end() 
+                else:
+                    # Agar so'z to'liq topilgan bo'lsa, g'alaba
+                    if spacedOut(word, guessed).count('_') == 0:
+                        end(True)  # G'alaba        
