@@ -84,5 +84,7 @@ def end(winner=False):
     global limbs
     winTxt = 'WINNER! Press any key to play again...'
     lostTxt = 'You Lost! Press any key to play again...'
- 
+    redraw_game_window()
+    pygame.time.delay(1000)
+    win.fill(GREEN)
 
