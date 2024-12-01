@@ -145,3 +145,5 @@ while inPlay:
             if letter is not None:
                 guessed.append(chr(letter))
                 buttons[letter - 65][4] = False
+                if hang(chr(letter)):
+                    limbs += 1
