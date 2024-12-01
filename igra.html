@@ -52,3 +52,6 @@ global guessed
     label1 = guess_font.render(spaced, 1, BLACK)
     rect = label1.get_rect()
     win.blit(label1, (winWidth / 2 - rect[2] / 2, 400))
+    
+    # Hangman tasvirini chizish
+    pic = hangmanPics[limbs]
