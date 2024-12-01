@@ -137,4 +137,7 @@ while inPlay:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 inPlay = False
-    
+                
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            clickPos = pygame.mouse.get_pos()
+            letter = buttonHit(clickPos[0], clickPos[1])
