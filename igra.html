@@ -64,4 +64,14 @@ def randomWord():
 def hang(guess):
     global word
     return guess.lower() not in word.lower()
+def spacedOut(word, guessed=[]):
+    spacedWord = ''
+    for x in range(len(word)):
+        if word[x] != ' ':
+            spacedWord += '_ '
+            if word[x].upper() in guessed:
+                spacedWord = spacedWord[:-2] + word[x].upper() + ' '
+        elif word[x] == ' ':
+            spacedWord += ' '
+    return spacedWord
 
