@@ -74,4 +74,10 @@ def spacedOut(word, guessed=[]):
         elif word[x] == ' ':
             spacedWord += ' '
     return spacedWord
+def buttonHit(x, y):
+    for button in buttons:
+        if x < button[1] + 20 and x > button[1] - 20:
+            if y < button[2] + 20 and y > button[2] - 20:
+                return button[5]
+    return None    
 
