@@ -107,4 +107,8 @@ def end(winner=False):
             if event.type == pygame.KEYDOWN:
                 waiting = False
     reset()
-
+def reset():
+    global limbs, guessed, buttons, word
+    limbs = 0
+    guessed = []
+    word = randomWord()
