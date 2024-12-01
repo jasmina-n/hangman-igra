@@ -118,3 +118,6 @@ def reset():
 # Harf tugmalarini sozlash
 increase = round(winWidth / 13)
 for i in range(26):
+    x = 25 + (increase * (i % 13))
+    y = 40 + (increase * (i // 13))
+    buttons.append([LIGHT_BLUE, x, y, 20, True, 65 + i])
