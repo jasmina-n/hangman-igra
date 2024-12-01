@@ -79,5 +79,10 @@ def buttonHit(x, y):
         if x < button[1] + 20 and x > button[1] - 20:
             if y < button[2] + 20 and y > button[2] - 20:
                 return button[5]
-    return None    
+    return None 
+def end(winner=False):
+    global limbs
+    winTxt = 'WINNER! Press any key to play again...'
+    lostTxt = 'You Lost! Press any key to play again...'
+ 
 
